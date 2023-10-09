@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* max-width: 100%;
+    margin: auto; */
+    text-align: center;
+}
+
+.main-part{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-items: center;
+}
+
+.allcard{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr);
+    /* grid-template-columns:  , 1fr; */
+    /* grid:400px/ auto auto  auto auto;*/
+    gap: 10px; 
+    
+}
+
+.recpte{
+    width: 30%;
+}
+
+
+/* card style start */
+
+
+
+.card{
+    /* background-color: aqua; */
+    border: 2px solid black;
+    background-color: rgb(237, 240, 240);
+    /* border-radius: ; */
+    width:20rem;
+    height: 25rem;
+    padding: 10px;
+}
+.card-img{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+.card-img img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-heading{
+    color: rgb(44, 43, 43);
+    font-size:large;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.rating{
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+.fa{
+   color: red !important;
+}
+
+.card-detles{
+    font-size: 18px;
+    margin-top: 5px;
+    color: black;
+}
+.price{
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+.btn{
+    width: 35%;
+    margin: auto;
+}
+.btn-Buy{
+    width: 100%;
+    height: 40px;
+    font-size: large;
+    font-weight: bold;
+    color: black;
+    border-radius: 10px;
+    
+}
+
+
+
+@media only screen and (max-width:1320px){
+    .allcard{
+        grid-template-columns: repeat( 2, 1fr);
+    }
+}
+
+@media only screen and (max-width:990px){
+    .allcard{
+        grid-template-columns: repeat( 1, 1fr);
+    }
+}
+
+@media only screen and (max-width:660px){
+    .allcard{
+        grid-template-columns: repeat( 1, 1fr);
+    }
+    .main-part{
+        flex-direction: column-reverse;
+    }
+
+}
