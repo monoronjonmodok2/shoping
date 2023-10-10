@@ -14,6 +14,7 @@ body{
     margin-right: 10px; */
     display: flex;
     justify-items: center;
+    /* position: relative; */
 }
 
 .allcard{
@@ -27,14 +28,33 @@ body{
     
 }
 
+
 .recpte{
     width: 30%;
     background-color: antiquewhite;
-    justify-items: center
+    justify-items: center;
+    
+}
+.orderNow{
+    width: 50%;
+    height:50px;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 #selectItem{
     margin-top: 25px;
+    border: 1px solid black;
+}
+#selectItem ul {
+    display: flex;
+    justify-content: space-around;
+}
+#selectItem ul LI{
+    list-style: none;
+
 }
 
 
@@ -111,6 +131,7 @@ body{
     font-weight: bold;
     color: rgb(38, 28, 28);
     margin-bottom: 20px;
+   
 }
 .cuppon{
     margin-top: 10px;
@@ -149,13 +170,55 @@ body{
 
 }
 
+
 /* recpte part design end */
+
+
+
+
+/* /* pop up manu section design start */
+.popUpBar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+   
+    
+}
+.popup{
+    width: 25rem;
+    height: 300px;
+    background-color:rgb(237, 240, 240);
+    position: relative;
+}
+
+.umbrela{
+    width: 50px;
+    height: 50px;
+}
+
+.popup-heading, .congra{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 30px;
+
+}
+
+.close-pop{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/* pop up manu section design end */ */
+
 
 
 
 @media only screen and (max-width:1424px){
     .allcard{
         grid-template-columns: repeat( 2, 1fr);
+
     }
 }
 

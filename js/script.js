@@ -13,6 +13,7 @@ function getProductPrice(productId){
 }
 
 
+
 function  buy(button){
     const productName = button.parentNode.parentNode.childNodes[3].innerText;
     const productPrice = parseFloat(button.parentNode.parentNode.childNodes[9].childNodes[1].innerText);
@@ -29,7 +30,17 @@ function  buy(button){
     totalPrice = totalPrice+productPrice;
     document.getElementById('totalPrice').innerText=totalPrice;
 
-    
+    const applyBtn = document.getElementById('apply-btn');
+    const cupon = document.getElementById('cuponn');
+
+
+ if(totalPrice>0){
+    applyBtn.removeAttribute('disabled');
+    cupon.removeAttribute('disabled');
+ }
+
+
+
 
  if(totalPrice>200){
     let discount = document.getElementById('discountPrice');
@@ -66,4 +77,15 @@ apply.addEventListener('click', function(){
      alart('your cuppon not valid')
     }
 })
+
+
+const order=  document.getElementById('order');;
+
+order.addEventListener('click', function(){
+    alert('your  order is recive')
+})
+
+
+// let totalPrice = parseFloat(document.getElementById('totalPrice').innerText);
+
  
